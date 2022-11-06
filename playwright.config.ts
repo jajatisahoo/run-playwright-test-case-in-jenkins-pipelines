@@ -13,7 +13,7 @@ import { devices} from '@playwright/test';
 const config: PlaywrightTestConfig = {
   reporter: [ ['html', { outputFolder: 'my-report' }] ],
  
-  testDir: './tests',
+  testDir: './pomtest',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -34,6 +34,7 @@ const config: PlaywrightTestConfig = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  testMatch: "/pomtest/*.ts",
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     viewport:null,
@@ -43,12 +44,12 @@ const config: PlaywrightTestConfig = {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
     headless:false,
-    screenshot:"on",
-    video :"on"
+    screenshot:"off",
+    video :"off"
   },
-  
-
+ 
 
   /* Configure projects for major browsers */
   projects: [

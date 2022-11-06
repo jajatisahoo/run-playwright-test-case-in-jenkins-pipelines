@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("Alert Practice", async ({ page }) => {
+test("Alert Practice  @smoke", async ({ page }) => {
 
     await page.goto('https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo');
     page.on("dialog", async (alert) => {
@@ -14,3 +14,5 @@ test("Alert Practice", async ({ page }) => {
     
 
 })
+
+//npx playwright test --grep "@smoke"
