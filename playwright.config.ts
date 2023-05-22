@@ -13,7 +13,7 @@ import { devices} from '@playwright/test';
 const config: PlaywrightTestConfig = {
   reporter: [ ['html', { outputFolder: 'my-report' }] ],
  
-  testDir: './pomtest',
+  testDir: './tests',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
