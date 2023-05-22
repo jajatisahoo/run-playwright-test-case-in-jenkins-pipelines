@@ -34,7 +34,7 @@ const config: PlaywrightTestConfig = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  testMatch: "/pomtest/*.ts",
+ // testMatch: "/pomtest/*.ts",
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     viewport:null,
